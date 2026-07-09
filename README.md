@@ -200,6 +200,7 @@ images/homepage.png
 ```
 
 ---
+---
 
 # 🎯 Future Improvements
 
@@ -212,8 +213,7 @@ images/homepage.png
 * Kubernetes deployment
 * GitHub Actions CI/CD
 * AWS deployment
-  
----
+
 # 🤝 Contributing
 
 Contributions are welcome.
