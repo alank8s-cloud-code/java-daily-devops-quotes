@@ -27,6 +27,9 @@
 
     <build>
 
+        <!-- This makes the generated JAR name "app.jar" -->
+        <finalName>app</finalName>
+
         <plugins>
 
             <plugin>

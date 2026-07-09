@@ -1,28 +1,23 @@
-#Base image for the project
+# Base Image
+FROM maven:3.9.9-eclipse-temurin-21
 
-FROM maven:3.9.9-eclipse-temurin-21 
-
-#SET THE WORKING DIRECTORY INSIDE CONTAINER
-
+# Set Working Directory
 WORKDIR /app
 
-#COPY THE PROJECT DEPENDENCIES CONTAINER DIRECTORY
+# Copy Maven Configuration
+COPY pom.xml .
 
-COPY  pom.xml .
-
-#Download all required libraries now and store them in the local Maven cache
-
+# Download Project Dependencies
 RUN mvn dependency:go-offline
 
-#
+# Copy Application Source Code
 COPY src ./src
 
-##Compile the source code and package it into a JAR
-
+# Build the Java Application
 RUN mvn clean package -DskipTests
 
-COPY target/*.jar app.jar
-
+# Expose Application Port
 EXPOSE 8000
 
-CMD ["java", "-jar", "app.jar"]
+# Run the Java Application
+CMD ["java", "-jar", "target/app.jar"]

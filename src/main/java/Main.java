@@ -65,9 +65,9 @@ public class Main {
 
         server.start();
 
-        System.out.println("--------------------------------");
+        System.out.println("---------------------------------");
 
-        System.out.println("MotivaFlow Started 🚀");
+        System.out.println("MotivaFlow Started ");
 
         System.out.println("http://localhost:8000");
 
