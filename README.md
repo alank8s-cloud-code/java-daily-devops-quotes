@@ -205,13 +205,9 @@ images/homepage.png
 
 * User login
 * Database support
-* Categories
-* Search quotes
-* Quote history
-* Admin panel
-* Kubernetes deployment
 * GitHub Actions CI/CD
 * AWS deployment
+* Kubernetes deployment
 ---
 
 # 🤝 Contributing
