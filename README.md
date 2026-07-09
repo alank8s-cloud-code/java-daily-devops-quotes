@@ -201,6 +201,19 @@ images/homepage.png
 
 ---
 
+# 🎯 Future Improvements
+
+* User login
+* Database support
+* Categories
+* Search quotes
+* Quote history
+* Admin panel
+* Kubernetes deployment
+* GitHub Actions CI/CD
+* AWS deployment
+  
+---
 # 🤝 Contributing
 
 Contributions are welcome.
