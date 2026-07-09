@@ -1,73 +1,41 @@
-# 🚀 MotivaFlow - Daily DevOps Motivation
+# 🚀 Java Daily DevOps Quotes
 
-MotivaFlow is a simple Java web application that shows random motivational quotes.
-
-The application is specially created for beginners who are learning:
-
-* Java
-* Maven
-* HTML
-* CSS
-* JavaScript
-* Docker
-* DevOps
-
-Every time you click the **"Inspire Me"** button, a new motivational quote is displayed.
+A simple Java application that displays random motivational and DevOps quotes through a modern web interface. This project is built using **Java**, **Maven**, **HTML**, **CSS**, and **JavaScript**, and can be run either locally or inside a Docker container.
 
 ---
 
-# 📷 Project Preview
+# 📌 Features
 
-> A modern SaaS-style motivation application with beautiful UI and random DevOps quotes.
-
----
-
-# ✨ Features
-
-* Random motivational quotes
-* DevOps and beginner-friendly quotes
-* Modern UI
-* Responsive design
-* Dark mode
-* Copy quote
-* Favorite quote
-* Share quote
-* Built using Java HttpServer
-* No framework required
+- 🎯 Random motivational and DevOps quotes
+- 💻 Modern SaaS-inspired UI
+- 📋 Copy quote to clipboard
+- 🔄 Generate a new quote with one click
+- ☕ Built using Java HttpServer
+- 📦 Maven project
+- 🐳 Docker support
 
 ---
 
-# 🛠 Technologies Used
+# 🛠️ Technologies Used
 
-### Backend
-
-* Java 21
-* Java HttpServer
-* Maven
-
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-
-### DevOps
-
-* Docker
-* Multi-stage Docker Build
+- Java 21
+- Maven
+- HTML5
+- CSS3
+- JavaScript
+- Docker
 
 ---
 
 # 📂 Project Structure
 
 ```text
-MotivaFlow/
+java-daily-devops-quotes/
 │
-├── pom.xml
 ├── Dockerfile
-├── Dockerfile.multistage
-├── docker-compose.yml
+├── .dockerignore
 ├── README.md
+├── pom.xml
 │
 └── src
     └── main
@@ -86,58 +54,28 @@ MotivaFlow/
 
 # 📋 Requirements
 
-Before running the project, install the following software.
+Before running the project, install:
 
-| Software            | Version     |
-| ------------------- | ----------- |
-| Java JDK            | 21 or later |
-| Maven               | 3.9+        |
-| Git                 | Latest      |
-| Docker *(Optional)* | Latest      |
+- Java 21
+- Maven
+- Git
+- Docker (Optional)
 
 ---
 
-# 🔍 Check Installed Versions
-
-Check Java
+# ⚙️ Clone the Repository
 
 ```bash
-java -version
-```
+git clone https://github.com/YOUR_USERNAME/java-daily-devops-quotes.git
 
-Check Maven
-
-```bash
-mvn -version
-```
-
-Check Docker
-
-```bash
-docker --version
-```
-
----
-
-# 📥 Clone the Repository
-
-```bash
-git clone <repository-url>
-```
-
-Go to the project folder
-
-```bash
-cd MotivaFlow
+cd java-daily-devops-quotes
 ```
 
 ---
 
 # ▶️ Run Without Docker
 
-## Step 1
-
-Compile the project
+## Step 1: Build the Project
 
 ```bash
 mvn clean package
@@ -145,53 +83,44 @@ mvn clean package
 
 ---
 
-## Step 2
-
-Run the application
+## Step 2: Run the Application
 
 ```bash
-java -jar target/motivaflow-1.0.0.jar
+java -jar target/app.jar
 ```
 
 ---
 
-## Step 3
-
-Open your browser
+## Step 3: Open the Browser
 
 ```
 http://localhost:8000
 ```
-
-You should see the MotivaFlow application.
 
 ---
 
 # 🐳 Run With Docker
 
-## Step 1
-
-Build the Docker image
+## Step 1: Build the Docker Image
 
 ```bash
-docker build -f Dockerfile.multistage -t motivaflow .
+docker build -t java-daily-devops-quotes .
 ```
 
 ---
 
-## Step 2
-
-Run the container
+## Step 2: Run the Docker Container
 
 ```bash
-docker run -d -p 8000:8000 --name motivaflow motivaflow
+docker run -d \
+--name java-daily-devops-quotes \
+-p 8000:8000 \
+java-daily-devops-quotes
 ```
 
 ---
 
-## Step 3
-
-Open your browser
+## Step 3: Open the Browser
 
 ```
 http://localhost:8000
@@ -199,114 +128,95 @@ http://localhost:8000
 
 ---
 
-# 🛑 Stop the Container
+# 📦 Why Does Maven Generate app.jar?
+
+By default, Maven creates a JAR file using this format:
+
+```
+artifactId-version.jar
+```
+
+Example:
+
+```
+motivaflow-1.0.0.jar
+```
+
+To make the Dockerfile simpler, this project uses:
+
+```xml
+<build>
+    <finalName>app</finalName>
+</build>
+```
+
+Now Maven always generates:
+
+```
+target/app.jar
+```
+
+This means the Dockerfile never needs to change, even if the project version changes.
+
+---
+
+# 🐳 Dockerfile
+
+The application starts using:
+
+```dockerfile
+CMD ["java", "-jar", "target/app.jar"]
+```
+
+---
+
+# 📦 Build Output
+
+After running:
 
 ```bash
-docker stop motivaflow
+mvn clean package
+```
+
+The `target` directory looks like:
+
+```text
+target/
+├── app.jar
+├── classes
+├── generated-sources
+├── maven-archiver
+└── maven-status
 ```
 
 ---
 
-# ▶️ Start Again
+# 📸 Application Preview
 
-```bash
-docker start motivaflow
-```
-
----
-
-# 🗑 Remove Container
-
-```bash
-docker rm -f motivaflow
-```
-
----
-
-# 🗑 Remove Docker Image
-
-```bash
-docker rmi motivaflow
-```
-
----
-
-# 🌐 API Endpoint
-
-Get a random quote
+> Add screenshots of your application here.
 
 ```
-GET /api/quote
+images/homepage.png
 ```
-
-Example response
-
-```json
-{
-  "quote": "Automation is an investment, not an expense."
-}
-```
-
----
-
-# 📚 What I Learned
-
-While building this project, I learned:
-
-* Java HttpServer
-* REST API basics
-* JSON response
-* Reading files from resources
-* Maven project structure
-* HTML
-* CSS
-* JavaScript
-* Docker
-* Multi-stage Docker build
-* Static file serving
-* Project structure
-
----
-
-# 🎯 Future Improvements
-
-* User login
-* Database support
-* Categories
-* Search quotes
-* Quote history
-* Admin panel
-* Kubernetes deployment
-* GitHub Actions CI/CD
-* AWS deployment
 
 ---
 
 # 🤝 Contributing
 
-Feel free to fork this repository and improve it.
+Contributions are welcome.
 
-If you find any issue, please create an Issue or Pull Request.
-
----
-
-# ⭐ Support
-
-If you found this project helpful:
-
-⭐ Star this repository
-
-🍴 Fork it
-
-📢 Share it with others
+1. Fork the repository.
+2. Create a new branch.
+3. Commit your changes.
+4. Push the branch.
+5. Open a Pull Request.
 
 ---
 
-# 👨‍💻 Author
+# 📄 License
 
-**Suraj**
+This project is licensed under the MIT License.
 
-Aspiring DevOps Engineer
+---
 
-Always learning and building new projects.
-
+⭐ If you found this project helpful, consider giving it a star on GitHub!
