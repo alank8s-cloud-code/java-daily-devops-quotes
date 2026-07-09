@@ -1,0 +1,35 @@
+#Stage1: Builder
+
+#base image for the project
+
+FROM maven:3.9.9-eclipse-temurin-21 AS builder
+
+#SET THE WORKING DIRECTORY INSIDE CONTAINER
+
+WORKDIR /app
+
+#COPY THE PROJECT CODE INSIDE THE CONTAINER DIRECTORY
+
+COPY . .
+
+##Compile the source code and package it into a JAR
+
+RUN mvn clean package
+
+# Stage 2: Runtime
+
+FROM gcr.io/distroless/java21-debian13
+
+# Set the working directory inside the container
+
+WORKDIR /app
+
+# Copy only the packaged JAR file from the builder stage
+
+COPY --from=builder /app/target/*.jar app.jar
+
+EXPOSE 8000
+
+CMD ["app.jar"]
+
+

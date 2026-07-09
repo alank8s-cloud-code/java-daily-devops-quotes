@@ -1,0 +1,100 @@
+Every expert was once a beginner.
+Small steps every day lead to big success.
+Consistency beats motivation.
+Discipline creates opportunities.
+Believe in yourself and keep learning.
+Don't fear failure, fear giving up.
+The future belongs to those who keep learning.
+Success is built one habit at a time.
+Dream big. Start small. Act now.
+Every bug you fix makes you a better engineer.
+Your only competition is who you were yesterday.
+Learning never exhausts the mind.
+Today's effort becomes tomorrow's achievement.
+Stay curious. Stay humble.
+Keep showing up, even when it's difficult.
+One command learned today saves hours tomorrow.
+Read documentation before searching for shortcuts.
+Mistakes are proof that you are trying.
+Be patient. Growth takes time.
+Every deployment teaches something new.
+Automation is an investment, not an expense.
+If you repeat a task twice, automate it.
+Infrastructure should be code, not manual work.
+Every deployment should be repeatable.
+A reliable system is better than a perfect system.
+Build once. Deploy anywhere.
+Containers solve consistency problems.
+Monitoring is not optional.
+Logs tell stories. Learn to read them.
+Backups are useless until you restore them.
+CI/CD is about confidence, not speed.
+Automate boring work so you can solve interesting problems.
+Good documentation saves countless hours.
+Infrastructure is software too.
+Version everything.
+Test before deploying.
+Security is everyone's responsibility.
+DevOps is collaboration, not just tools.
+Continuous learning is the heart of DevOps.
+Every outage is a lesson.
+The terminal is your superpower.
+Master Linux, and servers become your playground.
+Every Linux command has a purpose.
+Learn one command every day.
+The shell rewards curiosity.
+Practice in the terminal until it feels natural.
+Read the manual before asking for help.
+Permissions matter.
+Understand processes before killing them.
+Know your logs before guessing.
+Containers make software portable.
+Build lightweight images.
+Smaller images mean faster deployments.
+Write clean Dockerfiles.
+One process per container.
+Use multi-stage builds whenever possible.
+Don't run containers as root.
+Images are immutable.
+Docker simplifies consistency.
+Build it once, run it anywhere.
+Pods are temporary, your knowledge is permanent.
+Kubernetes rewards patience.
+Understand Pods before Deployments.
+Learn Services before Ingress.
+Observe before troubleshooting.
+Scaling is easier when applications are stateless.
+YAML is your friend.
+Small clusters teach big lessons.
+Practice kubectl every day.
+Every deployment improves your confidence.
+Cloud is about solving problems, not memorizing services.
+Understand concepts before certifications.
+Learn AWS one service at a time.
+Every cloud engineer starts with one virtual machine.
+Automation is the future of cloud.
+Infrastructure should be reproducible.
+Cloud skills grow through practice.
+Deploy real projects.
+Build your portfolio in public.
+Never stop experimenting.
+you don't need to know everything to get started.
+The first project is always the hardest.
+Progress is more important than perfection.
+Google is a skill.
+Stack Overflow is a learning partner, not a shortcut.
+Every senior developer was once confused.
+Don't compare your Chapter 1 to someone else's Chapter 20.
+Ask questions without fear.
+Keep building projects.
+Practice every single day.
+Your GitHub is your proof of learning.
+Learning by doing is the fastest way to grow.
+Celebrate small wins.
+Stay consistent for 90 days.
+Success comes from persistence.
+Every commit counts.
+One project is worth more than ten tutorials.
+The best time to start was yesterday. The second best time is today.
+Don't wait until you're ready.
+Keep coding. Keep learning. Keep growing.

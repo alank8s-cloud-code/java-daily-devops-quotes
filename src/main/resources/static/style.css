@@ -1,0 +1,1490 @@
+/* PROFESSIONAL SECTION ORDER
+1. Variables (:root)
+2. Reset (*, html, body)
+3. Background
+4. Navigation
+5. Hero
+6. Main Container
+7. Quote Card
+8. Action Buttons
+9. Statistics
+10. Features
+11. CTA
+12. Footer
+13. Scrollbar & Selection
+14. Animations (@keyframes)
+15. Animation Classes
+16. Focus States
+17. Dark Theme
+18. Transitions
+19. Responsive Media Queries
+
+Reorder the existing blocks below following this order.
+*/
+
+/* =====================================================
+   MotivaFlow - Premium SaaS UI
+   Part 5.1
+=====================================================*/
+
+
+/* =====================================================
+   MotivaFlow - Premium SaaS UI
+   Part 5.2
+=====================================================*/
+
+/* ============================
+   Main Container
+============================ */
+
+
+/* =====================================================
+   MotivaFlow - Premium SaaS UI
+   Part 5.3
+=====================================================*/
+
+/* ============================
+   Statistics Section
+============================ */
+
+
+/* =====================================================
+   MotivaFlow - Premium SaaS UI
+   Part 5.4
+=====================================================*/
+
+/* ============================
+   Floating Animation
+============================ */
+
+@keyframes floatCard {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+.quote-card {
+
+    animation: floatCard 8s ease-in-out infinite;
+
+}
+
+/* ============================
+   Fade Up Animation
+============================ */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.hero,
+.quote-card,
+.stat-card,
+.feature-card,
+.cta {
+
+    animation: fadeUp .8s ease both;
+
+}
+
+.stat-card:nth-child(2) {
+
+    animation-delay: .15s;
+
+}
+
+.stat-card:nth-child(3) {
+
+    animation-delay: .3s;
+
+}
+
+.feature-card:nth-child(2) {
+
+    animation-delay: .15s;
+
+}
+
+.feature-card:nth-child(3) {
+
+    animation-delay: .3s;
+
+}
+
+.feature-card:nth-child(4) {
+
+    animation-delay: .45s;
+
+}
+
+/* ============================
+   Focus States
+============================ */
+
+button:focus-visible {
+
+    outline: 3px solid rgba(0, 229, 255, .6);
+
+    outline-offset: 4px;
+
+}
+
+/* ============================
+   Dark Theme
+============================ */
+
+body.dark {
+
+    background: #020617;
+
+    color: #F8FAFC;
+
+}
+
+body.dark .gradient-bg {
+
+    background:
+        radial-gradient(circle at top left, #4338CA 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #0891B2 0%, transparent 40%),
+        radial-gradient(circle at center, #581C87 0%, transparent 55%),
+        #020617;
+
+}
+
+body.dark nav {
+
+    background: rgba(2, 6, 23, .55);
+
+}
+
+body.dark .quote-card,
+body.dark .feature-card,
+body.dark .stat-card,
+body.dark .cta {
+
+    background: rgba(15, 23, 42, .65);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+body.dark footer {
+
+    background: rgba(15, 23, 42, .55);
+
+}
+
+/* ============================
+   Smooth Transition
+============================ */
+
+body,
+nav,
+.quote-card,
+.stat-card,
+.feature-card,
+.cta,
+footer,
+button {
+
+    transition: all .35s ease;
+
+}
+
+/* ============================
+   Tablet
+============================ */
+
+@media (max-width:992px) {
+
+    nav {
+
+        padding: 20px 6%;
+
+    }
+
+    .hero {
+
+        margin-top: 70px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 56px;
+
+    }
+
+    .quote-card {
+
+        padding: 40px;
+
+    }
+
+    #quote {
+
+        font-size: 26px;
+
+        min-height: 150px;
+
+    }
+
+    .cta h2 {
+
+        font-size: 40px;
+
+    }
+
+}
+
+/* ============================
+   Mobile
+============================ */
+
+@media (max-width:768px) {
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+    .hero p {
+
+        font-size: 17px;
+
+    }
+
+    .quote-card {
+
+        padding: 30px;
+
+        border-radius: 24px;
+
+    }
+
+    #quote {
+
+        font-size: 22px;
+
+        min-height: 130px;
+
+        line-height: 1.6;
+
+    }
+
+    .action-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .icon-btn {
+
+        width: 100%;
+
+        max-width: 260px;
+
+    }
+
+    #generateBtn,
+    #bottomGenerate {
+
+        width: 100%;
+
+        max-width: 320px;
+
+    }
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .cta {
+
+        padding: 45px 25px;
+
+    }
+
+    .cta h2 {
+
+        font-size: 34px;
+
+    }
+
+    .cta p {
+
+        font-size: 17px;
+
+    }
+
+}
+
+/* ============================
+   Small Mobile
+============================ */
+
+@media (max-width:480px) {
+
+    .logo {
+
+        font-size: 24px;
+
+    }
+
+    .badge {
+
+        font-size: 13px;
+
+        padding: 10px 18px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 34px;
+
+    }
+
+    #quote {
+
+        font-size: 20px;
+
+    }
+
+    .quote-icon {
+
+        width: 70px;
+
+        height: 70px;
+
+        font-size: 28px;
+
+    }
+
+    .stat-card h2 {
+
+        font-size: 38px;
+
+    }
+
+    .feature-card {
+
+        padding: 30px 20px;
+
+    }
+
+    footer p {
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* ============================
+   Reduce Motion
+============================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+
+
+
+.stats {
+
+    width: min(1200px, 92%);
+
+    margin: 90px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+.stat-card {
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    transition: .35s;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .20);
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 25px 55px rgba(108, 99, 255, .30);
+
+}
+
+.stat-card h2 {
+
+    font-size: 48px;
+
+    color: #00E5FF;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+
+}
+
+.stat-card p {
+
+    font-size: 17px;
+
+    color: #CBD5E1;
+
+}
+
+/* ============================
+   Features
+============================ */
+
+.features {
+
+    width: min(1200px, 92%);
+
+    margin: 100px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+}
+
+.feature-card {
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    transition: .35s;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.feature-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(135deg,
+            transparent,
+            rgba(255, 255, 255, .08),
+            transparent);
+
+    transform: translateX(-120%);
+
+    transition: .7s;
+
+}
+
+.feature-card:hover::before {
+
+    transform: translateX(120%);
+
+}
+
+.feature-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow: 0 25px 55px rgba(127, 90, 240, .35);
+
+}
+
+.feature-card i {
+
+    font-size: 52px;
+
+    margin-bottom: 25px;
+
+    background: linear-gradient(135deg, #6C63FF, #00E5FF);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+.feature-card h3 {
+
+    font-size: 26px;
+
+    margin-bottom: 15px;
+
+}
+
+.feature-card p {
+
+    color: #CBD5E1;
+
+    line-height: 1.8;
+
+}
+
+/* ============================
+   CTA
+============================ */
+
+.cta {
+
+    width: min(1100px, 92%);
+
+    margin: 120px auto;
+
+    text-align: center;
+
+    padding: 70px 50px;
+
+    border-radius: 35px;
+
+    background: linear-gradient(135deg,
+            rgba(108, 99, 255, .22),
+            rgba(0, 229, 255, .12));
+
+    backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .06);
+
+    top: -220px;
+
+    right: -150px;
+
+    filter: blur(60px);
+
+}
+
+.cta h2 {
+
+    font-size: 52px;
+
+    margin-bottom: 20px;
+
+    line-height: 1.3;
+
+}
+
+.cta p {
+
+    font-size: 20px;
+
+    color: #CBD5E1;
+
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+
+    line-height: 1.8;
+
+}
+
+/* ============================
+   Footer
+============================ */
+
+footer {
+
+    margin-top: 100px;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+    background: rgba(255, 255, 255, .04);
+
+    backdrop-filter: blur(18px);
+
+}
+
+footer p {
+
+    color: #94A3B8;
+
+    font-size: 16px;
+
+    letter-spacing: .5px;
+
+}
+
+/* ============================
+   Scrollbar
+============================ */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #0F172A;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: linear-gradient(#6C63FF,
+            #00E5FF);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: linear-gradient(#7F5AF0,
+            #38BDF8);
+
+}
+
+/* ============================
+   Selection
+============================ */
+
+::selection {
+
+    background: #6C63FF;
+
+    color: #ffffff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+
+    width: min(1200px, 92%);
+
+    margin: 0 auto 80px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+/* ============================
+   Quote Card
+============================ */
+
+.quote-card {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    padding: 55px;
+
+    border-radius: 32px;
+
+    background: rgba(255, 255, 255, .10);
+
+    backdrop-filter: blur(24px);
+
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, .35),
+        inset 0 1px 1px rgba(255, 255, 255, .15);
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: all .4s ease;
+
+}
+
+.quote-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 35px 100px rgba(108, 99, 255, .35),
+        inset 0 1px 1px rgba(255, 255, 255, .18);
+
+}
+
+/* Top Glow */
+
+.quote-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+
+    left: -120px;
+
+    width: 260px;
+
+    height: 260px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 229, 255, .18);
+
+    filter: blur(70px);
+
+}
+
+/* Bottom Glow */
+
+.quote-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -120px;
+
+    right: -120px;
+
+    width: 260px;
+
+    height: 260px;
+
+    border-radius: 50%;
+
+    background: rgba(108, 99, 255, .20);
+
+    filter: blur(80px);
+
+}
+
+/* ============================
+   Quote Icon
+============================ */
+
+.quote-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 34px;
+
+    color: white;
+
+    background: linear-gradient(135deg, #6C63FF, #00E5FF);
+
+    box-shadow: 0 15px 35px rgba(108, 99, 255, .45);
+
+    margin-bottom: 35px;
+
+}
+
+/* ============================
+   Quote Text
+============================ */
+
+#quote {
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    line-height: 1.8;
+
+    color: white;
+
+    min-height: 170px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: all .35s ease;
+
+}
+
+/* Fade Animation */
+
+.fade {
+
+    animation: fadeQuote .5s ease;
+
+}
+
+@keyframes fadeQuote {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ============================
+   Action Buttons
+============================ */
+
+.action-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin: 45px 0;
+
+}
+
+/* Small Buttons */
+
+.icon-btn {
+
+    border: none;
+
+    padding: 15px 26px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    transition: all .3s ease;
+
+    backdrop-filter: blur(12px);
+
+}
+
+.icon-btn:hover {
+
+    transform: translateY(-4px);
+
+    background: linear-gradient(135deg, #6C63FF, #7F5AF0);
+
+    box-shadow: 0 15px 35px rgba(108, 99, 255, .35);
+
+}
+
+/* ============================
+   Main Generate Button
+============================ */
+
+#generateBtn,
+#bottomGenerate {
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    padding: 18px 55px;
+
+    border-radius: 60px;
+
+    background: linear-gradient(135deg,
+            #6C63FF,
+            #7F5AF0,
+            #00E5FF);
+
+    background-size: 300% 300%;
+
+    transition: .35s;
+
+    animation: gradientMove 5s infinite;
+
+    box-shadow: 0 20px 40px rgba(108, 99, 255, .40);
+
+}
+
+/* Hover */
+
+#generateBtn:hover,
+#bottomGenerate:hover {
+
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow: 0 25px 55px rgba(0, 229, 255, .45);
+
+}
+
+/* Click */
+
+#generateBtn:active,
+#bottomGenerate:active {
+
+    transform: scale(.96);
+
+}
+
+/* Moving Gradient */
+
+@keyframes gradientMove {
+
+    0% {
+
+        background-position: 0% 50%;
+
+    }
+
+    50% {
+
+        background-position: 100% 50%;
+
+    }
+
+    100% {
+
+        background-position: 0% 50%;
+
+    }
+
+}
+
+/* ============================
+   Ripple Effect
+============================ */
+
+.ripple {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.ripple::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 0;
+
+    height: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .4);
+
+    transform: translate(-50%, -50%);
+
+    animation: ripple .6s linear;
+
+}
+
+@keyframes ripple {
+
+    from {
+
+        width: 0;
+
+        height: 0;
+
+        opacity: .8;
+
+    }
+
+    to {
+
+        width: 400px;
+
+        height: 400px;
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+:root {
+
+    --primary: #6C63FF;
+    --secondary: #7F5AF0;
+    --accent: #00E5FF;
+
+    --white: #ffffff;
+
+    --text: #F8FAFC;
+    --text-light: #CBD5E1;
+
+    --glass: rgba(255, 255, 255, .12);
+    --glass-border: rgba(255, 255, 255, .18);
+
+    --shadow: 0 20px 60px rgba(0, 0, 0, .25);
+
+    --radius: 22px;
+
+    --transition: .35s ease;
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+    background: #0F172A;
+
+    min-height: 100vh;
+
+    position: relative;
+
+}
+
+/* ==============================
+   Animated Background
+=================================*/
+
+.gradient-bg {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top left, #6C63FF 0%, transparent 45%),
+        radial-gradient(circle at bottom right, #00E5FF 0%, transparent 45%),
+        radial-gradient(circle at center, #9333EA 0%, transparent 55%),
+        #0F172A;
+
+    z-index: -5;
+
+}
+
+.blob {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: .35;
+
+    animation: float 18s infinite ease-in-out;
+
+    z-index: -4;
+
+}
+
+.blob1 {
+
+    width: 320px;
+    height: 320px;
+
+    background: #7F5AF0;
+
+    top: -80px;
+    left: -80px;
+
+}
+
+.blob2 {
+
+    width: 350px;
+    height: 350px;
+
+    background: #00E5FF;
+
+    bottom: -100px;
+    right: -100px;
+
+    animation-delay: 4s;
+
+}
+
+.blob3 {
+
+    width: 260px;
+    height: 260px;
+
+    background: #FF4D94;
+
+    top: 45%;
+    left: 55%;
+
+    animation-delay: 8s;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translate(0, 0) scale(1);
+
+    }
+
+    50% {
+
+        transform: translate(60px, -40px) scale(1.15);
+
+    }
+
+    100% {
+
+        transform: translate(0, 0) scale(1);
+
+    }
+
+}
+
+/* ============================
+Navbar
+============================*/
+
+nav {
+
+    width: 100%;
+
+    padding: 25px 9%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+
+    backdrop-filter: blur(20px);
+
+    background: rgba(15, 23, 42, .35);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    z-index: 100;
+
+}
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+}
+
+.logo span {
+
+    color: var(--accent);
+
+}
+
+.nav-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.nav-buttons button {
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 18px;
+
+    background: rgba(255, 255, 255, .08);
+
+    transition: var(--transition);
+
+}
+
+.nav-buttons button:hover {
+
+    transform: translateY(-4px);
+
+    background: var(--primary);
+
+    box-shadow: 0 10px 30px rgba(108, 99, 255, .45);
+
+}
+
+/* ============================
+Hero
+============================*/
+
+.hero {
+
+    width: min(1100px, 92%);
+
+    margin: 90px auto 70px;
+
+    text-align: center;
+
+}
+
+.badge {
+
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    color: #B8C5FF;
+
+    font-size: 15px;
+
+    margin-bottom: 28px;
+
+    backdrop-filter: blur(10px);
+
+}
+
+.hero h1 {
+
+    font-size: clamp(42px, 7vw, 74px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+}
+
+.hero h1 span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    background: linear-gradient(90deg, #6C63FF, #00E5FF, #FF4D94);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+.hero p {
+
+    max-width: 760px;
+
+    margin: 35px auto 0;
+
+    color: var(--text-light);
+
+    font-size: 20px;
+
+    line-height: 1.9;
+
+}

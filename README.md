@@ -1,68 +1,312 @@
-# Java Motivational Quotes App
+# 🚀 MotivaFlow - Daily DevOps Motivation
 
-This project is a simple Java-based HTTP server that serves random motivational quotes via a REST API. The quotes are externalized to a `quotes.txt` file for easy customization.
+MotivaFlow is a simple Java web application that shows random motivational quotes.
 
-## Features
-- Serves random motivational quotes in JSON format.
-- Uses an external `quotes.txt` file for configurable quotes.
-- Lightweight HTTP server using `com.sun.net.httpserver.HttpServer`.
-- Dockerized for easy deployment.
+The application is specially created for beginners who are learning:
 
-## Requirements
-- Java 17+
-- Maven (if building from source)
-- Docker (optional, for containerized deployment)
+* Java
+* Maven
+* HTML
+* CSS
+* JavaScript
+* Docker
+* DevOps
 
-## Setup and Usage
+Every time you click the **"Inspire Me"** button, a new motivational quote is displayed.
 
-### Running Locally
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/LondheShubham153/java-quotes-app.git
-   cd java-quotes-app
-   ```
-2. Ensure `quotes.txt` exists in the project directory and contains quotes (one per line).
-3. Compile and run the application:
-   ```sh
-   javac src/Main.java -d out
-   java -cp out Main
-   ```
-4. The server will start on `http://localhost:8000/`.
-5. Test the API using:
-   ```sh
-   curl http://localhost:8000/
-   ```
+---
 
-### Running with Docker
-1. Build the Docker image:
-   ```sh
-   docker build -t motivational-quotes-api .
-   ```
-2. Run the container:
-   ```sh
-   docker run -p 8000:8000 motivational-quotes-api
-   ```
-3. Access the API at `http://localhost:8000/`.
+# 📷 Project Preview
 
-## File Structure
+> A modern SaaS-style motivation application with beautiful UI and random DevOps quotes.
+
+---
+
+# ✨ Features
+
+* Random motivational quotes
+* DevOps and beginner-friendly quotes
+* Modern UI
+* Responsive design
+* Dark mode
+* Copy quote
+* Favorite quote
+* Share quote
+* Built using Java HttpServer
+* No framework required
+
+---
+
+# 🛠 Technologies Used
+
+### Backend
+
+* Java 21
+* Java HttpServer
+* Maven
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+
+### DevOps
+
+* Docker
+* Multi-stage Docker Build
+
+---
+
+# 📂 Project Structure
+
+```text
+MotivaFlow/
+│
+├── pom.xml
+├── Dockerfile
+├── Dockerfile.multistage
+├── docker-compose.yml
+├── README.md
+│
+└── src
+    └── main
+        ├── java
+        │   └── Main.java
+        │
+        └── resources
+            ├── quotes.txt
+            └── static
+                ├── index.html
+                ├── style.css
+                └── script.js
 ```
-project-root/
-│── src/
-│   └── Main.java
-│── quotes.txt
-│── Dockerfile
-│── README.md
-│── target/
-│   └── myapp.jar (if using Maven build)
+
+---
+
+# 📋 Requirements
+
+Before running the project, install the following software.
+
+| Software            | Version     |
+| ------------------- | ----------- |
+| Java JDK            | 21 or later |
+| Maven               | 3.9+        |
+| Git                 | Latest      |
+| Docker *(Optional)* | Latest      |
+
+---
+
+# 🔍 Check Installed Versions
+
+Check Java
+
+```bash
+java -version
 ```
 
-## Customizing Quotes
-To customize the quotes, edit `quotes.txt` and restart the application. Each quote should be on a new line.
+Check Maven
 
-## License
-This project is licensed under the MIT License.
+```bash
+mvn -version
+```
 
-## Author
-[TrainWithShubham](https://github.com/LondheShubham153)
+Check Docker
 
+```bash
+docker --version
+```
+
+---
+
+# 📥 Clone the Repository
+
+```bash
+git clone <repository-url>
+```
+
+Go to the project folder
+
+```bash
+cd MotivaFlow
+```
+
+---
+
+# ▶️ Run Without Docker
+
+## Step 1
+
+Compile the project
+
+```bash
+mvn clean package
+```
+
+---
+
+## Step 2
+
+Run the application
+
+```bash
+java -jar target/motivaflow-1.0.0.jar
+```
+
+---
+
+## Step 3
+
+Open your browser
+
+```
+http://localhost:8000
+```
+
+You should see the MotivaFlow application.
+
+---
+
+# 🐳 Run With Docker
+
+## Step 1
+
+Build the Docker image
+
+```bash
+docker build -f Dockerfile.multistage -t motivaflow .
+```
+
+---
+
+## Step 2
+
+Run the container
+
+```bash
+docker run -d -p 8000:8000 --name motivaflow motivaflow
+```
+
+---
+
+## Step 3
+
+Open your browser
+
+```
+http://localhost:8000
+```
+
+---
+
+# 🛑 Stop the Container
+
+```bash
+docker stop motivaflow
+```
+
+---
+
+# ▶️ Start Again
+
+```bash
+docker start motivaflow
+```
+
+---
+
+# 🗑 Remove Container
+
+```bash
+docker rm -f motivaflow
+```
+
+---
+
+# 🗑 Remove Docker Image
+
+```bash
+docker rmi motivaflow
+```
+
+---
+
+# 🌐 API Endpoint
+
+Get a random quote
+
+```
+GET /api/quote
+```
+
+Example response
+
+```json
+{
+  "quote": "Automation is an investment, not an expense."
+}
+```
+
+---
+
+# 📚 What I Learned
+
+While building this project, I learned:
+
+* Java HttpServer
+* REST API basics
+* JSON response
+* Reading files from resources
+* Maven project structure
+* HTML
+* CSS
+* JavaScript
+* Docker
+* Multi-stage Docker build
+* Static file serving
+* Project structure
+
+---
+
+# 🎯 Future Improvements
+
+* User login
+* Database support
+* Categories
+* Search quotes
+* Quote history
+* Admin panel
+* Kubernetes deployment
+* GitHub Actions CI/CD
+* AWS deployment
+
+---
+
+# 🤝 Contributing
+
+Feel free to fork this repository and improve it.
+
+If you find any issue, please create an Issue or Pull Request.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful:
+
+⭐ Star this repository
+
+🍴 Fork it
+
+📢 Share it with others
+
+---
+
+# 👨‍💻 Author
+
+**Suraj**
+
+Aspiring DevOps Engineer
+
+Always learning and building new projects.
 
